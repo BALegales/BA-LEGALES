@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BA Legales — Estudio Jurídico</title>
+  <meta name="description" content="BA Legales — Estudio jurídico especializado en Derecho Laboral, Empresarial y de Familia. Buenos Aires."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Inter", sans-serif; background: #FAF8F5; color: #3D2B1F; width: 100%; overflow-x: hidden; }
+    .deco-circle { position: absolute; border-radius: 50%; pointer-events: none; }
+    nav { background: #FAF8F5; border-bottom: 0.5px solid #D9CFC6; padding: 14px 48px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .nav-logo-img { width: 42px; height: 42px; object-fit: contain; }
+    .nav-brand { font-size: 16px; letter-spacing: 2px; color: #7A4F3A; text-transform: uppercase; font-weight: 700; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { text-decoration: none; color: #6B5B52; font-size: 13px; letter-spacing: 0.8px; font-weight: 700; transition: color 0.2s; }
+    .nav-links a:hover { color: #7A4F3A; }
+    .nav-cta { background: #7A4F3A; color: #FAF8F5; border: none; padding: 10px 22px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; font-family: "Inter", sans-serif; font-weight: 700; transition: background 0.2s; }
+    .nav-cta:hover { background: #5C3A28; }
+    .hero { position: relative; height: 520px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-bg-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(44,26,16,0.52); }
+    .hero-content { position: relative; z-index: 3; text-align: center; padding: 0 48px; max-width: 680px; display: flex; flex-direction: column; align-items: center; gap: 20px; }
+    .hero-logo-img { width: 150px; height: auto; object-fit: contain; filter: drop-shadow(0 0 8px rgba(44,26,16,0.6)); }
+    .hero-divider { width: 40px; height: 1px; background: #E8C99A; }
+    .hero-title { font-family: "Playfair Display", serif; font-size: 36px; color: #FFFFFF; font-weight: 400; line-height: 1.28; }
+    .hero-title em { font-style: italic; color: #E8C99A; }
+    .hero-sub { font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.75; font-weight: 300; max-width: 500px; }
+    .hero-gap { height: 48px; background: #FAF8F5; }
+    .section-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #9B7A67; margin-bottom: 8px; display: block; }
+    .section-title { font-family: "Playfair Display", serif; font-size: 28px; font-weight: 400; color: #2C1A10; line-height: 1.3; margin-bottom: 16px; }
+    .gold-line { width: 36px; height: 1.5px; background: #C4A882; margin: 8px 0 16px; }
+    .objetivo { display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; position: relative; overflow: hidden; }
+    .objetivo-img { overflow: hidden; }
+    .objetivo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; display: block; }
+    .objetivo-text { padding: 64px 56px; display: flex; flex-direction: column; justify-content: center; background: #F7F3EF; position: relative; }
+    .objetivo-text p { font-size: 14px; color: #6B5B52; line-height: 1.9; font-weight: 300; margin-bottom: 18px; }
+    .quienes { background: #FAF8F5; padding: 80px 48px; position: relative; overflow: hidden; }
+    .quienes-header { text-align: center; margin-bottom: 52px; }
+    .founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1000px; margin: 0 auto; }
+    .founder-card { border: 0.5px solid #D9CFC6; background: #F7F3EF; overflow: hidden; }
+    .founder-photo { height: 380px; overflow: hidden; }
+    .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; display: block; }
+    .founder-photo.belen img { object-position: center 25%; }
+    .founder-body { padding: 28px 32px; text-align: center; }
+    .founder-name { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 500; color: #2C1A10; margin-bottom: 8px; }
+    .founder-role { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #9B7A67; margin-bottom: 18px; display: block; font-weight: 700; }
+    .founder-desc { font-size: 13px; color: #7A6560; line-height: 1.8; font-weight: 300; }
+    .areas { background: #F2EDE6; padding: 80px 48px; position: relative; overflow: hidden; }
+    .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 40px; }
+    .area-card { background: #FAF8F5; border: 0.5px solid #D9CFC6; overflow: hidden; }
+    .area-photo { height: 180px; overflow: hidden; }
+    .area-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform 0.4s; }
+    .area-photo.familia img { object-position: center 30%; }
+    .area-card:hover .area-photo img { transform: scale(1.04); }
+    .area-body { padding: 24px; }
+    .area-body h3 { font-family: "Playfair Display", serif; font-size: 19px; font-weight: 700; color: #2C1A10; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 0.5px solid #D9CFC6; }
+    .area-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .area-list li { font-size: 13px; color: #6B5B52; display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+    .area-list li::before { content: "✓"; color: #C4A882; font-size: 13px; flex-shrink: 0; font-weight: 700; }
+    .elegirnos { background: #F7F3EF; padding: 80px 48px; position: relative; overflow: hidden; }
+    .elegirnos-header { text-align: center; margin-bottom: 48px; }
+    .elegirnos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .elegirnos-card { background: #FAF8F5; border: 1px solid #D9CFC6; overflow: hidden; }
+    .e-photo { height: 140px; overflow: hidden; }
+    .e-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s; display: block; }
+    .elegirnos-card:hover .e-photo img { transform: scale(1.04); }
+    .e-body { padding: 22px 20px; }
+    .e-num { font-family: "Playfair Display", serif; font-size: 11px; color: #C4A882; letter-spacing: 2px; margin-bottom: 8px; display: block; }
+    .elegirnos-card h4 { font-size: 13px; color: #2C1A10; font-weight: 500; margin-bottom: 8px; line-height: 1.4; }
+    .elegirnos-card p { font-size: 12px; color: #7A6560; line-height: 1.65; font-weight: 300; }
+    .slogan { background: #EDE7DE; padding: 64px 48px; text-align: center; border-top: 0.5px solid #D9CFC6; border-bottom: 0.5px solid #D9CFC6; position: relative; overflow: hidden; }
+    .slogan-label { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #9B7A67; margin-bottom: 18px; display: block; }
+    .slogan-text { font-family: "Playfair Display", serif; font-size: 30px; color: #2C1A10; font-weight: 400; font-style: italic; line-height: 1.4; position: relative; z-index: 2; }
+    .slogan-text span { color: #7A4F3A; }
+    .slogan-sub { font-size: 10px; color: #9B7A67; letter-spacing: 3px; text-transform: uppercase; margin-top: 16px; display: block; position: relative; z-index: 2; }
+    .contacto { background: #FAF8F5; padding: 80px 48px; position: relative; overflow: hidden; }
+    .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-top: 40px; align-items: start; }
+    .contacto-form { display: flex; flex-direction: column; gap: 14px; }
+    .contacto-form input, .contacto-form textarea, .contacto-form select { background: #F7F3EF; border: 0.5px solid #C9BFB6; padding: 14px 16px; font-family: "Inter", sans-serif; font-size: 13px; color: #3D2B1F; width: 100%; outline: none; border-radius: 0; transition: border-color 0.2s; }
+    .contacto-form input:focus, .contacto-form textarea:focus, .contacto-form select:focus { border-color: #7A4F3A; }
+    .contacto-form textarea { height: 100px; resize: vertical; }
+    .btn-send { background: #7A4F3A; color: #FAF8F5; border: none; padding: 14px 30px; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer; font-family: "Inter", sans-serif; display: flex; align-items: center; gap: 8px; width: fit-content; transition: background 0.2s; }
+    .btn-send:hover { background: #5C3A28; }
+    .contacto-info h3 { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 400; color: #2C1A10; margin-bottom: 24px; }
+    .contact-item { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-bottom: 0.5px solid #D9CFC6; font-size: 13px; color: #6B5B52; }
+    .contact-item i { color: #7A4F3A; font-size: 19px; }
+    .social-row { display: flex; gap: 10px; margin-top: 22px; }
+    .social-btn { width: 40px; height: 40px; border: 0.5px solid #C4A882; display: flex; align-items: center; justify-content: center; color: #7A4F3A; font-size: 17px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .social-btn:hover { background: #F2EDE6; }
+    footer { background: #2C1A10; padding: 52px 48px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 36px; align-items: start; }
+    .footer-logo-img { width: 52px; height: auto; object-fit: contain; margin-bottom: 10px; filter: brightness(2); }
+    .footer-brand-name { font-size: 11px; letter-spacing: 4px; color: #7A6560; text-transform: uppercase; margin-bottom: 8px; display: block; font-weight: 700; }
+    .footer-brand p { font-size: 12px; color: #5C4A42; line-height: 1.65; font-weight: 300; }
+    .footer-col h5 { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #7A6560; margin-bottom: 14px; }
+    .footer-col a, .footer-col p { display: block; font-size: 12px; color: #5C4A42; text-decoration: none; margin-bottom: 7px; line-height: 1.5; }
+    .footer-col a:hover { color: #C4A882; }
+    .footer-bottom { background: #1E1009; border-top: 0.5px solid #3D2B1F; padding: 16px 48px; text-align: center; font-size: 10px; color: #4A3830; letter-spacing: 1px; }
+    @media (max-width: 900px) {
+      nav { padding: 14px 20px; } .nav-links { display: none; }
+      .hero { height: auto; min-height: 400px; padding: 60px 20px; } .hero-title { font-size: 26px; }
+      .hero-gap { height: 24px; } .objetivo { grid-template-columns: 1fr; } .objetivo-img { height: 300px; }
+      .objetivo-text { padding: 40px 24px; } .quienes { padding: 56px 20px; }
+      .founders-grid { grid-template-columns: 1fr; } .areas { padding: 56px 20px; }
+      .areas-grid { grid-template-columns: 1fr; } .elegirnos { padding: 56px 20px; }
+      .elegirnos-grid { grid-template-columns: 1fr 1fr; gap: 14px; } .slogan { padding: 48px 20px; }
+      .slogan-text { font-size: 22px; } .contacto { padding: 56px 20px; }
+      .contacto-grid { grid-template-columns: 1fr; } footer { padding: 40px 20px; grid-template-columns: 1fr; }
+      .footer-bottom { padding: 14px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><img class="nav-logo-img" src="logo-nav.png" alt="BA Legales logo"/><span class="nav-brand">B.A Legales</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Inicio</a></li><li><a href="#quienes">Quiénes somos</a></li>
+    <li><a href="#areas">Áreas</a></li><li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Consultanos</button>
+</nav>
+
+<section class="hero">
+  <img class="hero-bg-img" src="hero-bg.jpg" alt="Facultad de Derecho UBA"/>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-logo-img" src="logo-hero.png" alt="BA Legales"/>
+    <div class="hero-divider"></div>
+    <h1 class="hero-title">Soluciones jurídicas<br><em>claras y estratégicas.</em></h1>
+    <p class="hero-sub">Acompañamos a cada cliente con profesionalismo, dedicación y la cercanía que cada caso merece.</p>
+  </div>
+</section>
+
+<div class="hero-gap"></div>
+
+<section id="objetivo">
+  <div class="objetivo">
+    <div class="objetivo-img"><img src="mision.jpg" alt="Nuestro objetivo"/></div>
+    <div class="objetivo-text">
+      <div class="deco-circle" style="width:200px;height:200px;background:rgba(196,168,130,0.08);top:-60px;right:-60px;"></div>
+      <div class="deco-circle" style="width:100px;height:100px;background:rgba(155,122,103,0.06);bottom:30px;right:40px;"></div>
+      <span class="section-label">Nuestra misión</span>
+      <div class="gold-line"></div>
+      <h2 class="section-title">Nuestro objetivo</h2>
+      <p>Acompañar a cada cliente en la búsqueda de soluciones jurídicas claras, eficientes y adecuadas a sus necesidades.</p>
+      <p>Elegimos crear este estudio con una convicción clara: brindar un servicio jurídico basado en la cercanía, la responsabilidad y el acompañamiento personalizado que cada cliente merece.</p>
+      <p>Entendemos que detrás de cada cliente hay una historia, una preocupación o una decisión importante. Por eso trabajamos con compromiso, dedicación y transparencia, buscando siempre la mejor solución para cada caso.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quienes" id="quienes">
+  <div class="deco-circle" style="width:300px;height:300px;background:rgba(196,168,130,0.06);top:-100px;left:-100px;"></div>
+  <div class="deco-circle" style="width:160px;height:160px;background:rgba(155,122,103,0.05);bottom:40px;right:60px;"></div>
+  <div class="quienes-header">
+    <span class="section-label">Quiénes somos</span>
+    <h2 class="section-title" style="text-align:center;margin-top:8px;">Las fundadoras</h2>
+  </div>
+  <div class="founders-grid">
+    <div class="founder-card">
+      <div class="founder-photo"><img src="antonella.jpg" alt="Dra. Antonella Carrera"/></div>
+      <div class="founder-body">
+        <div class="founder-name">Dra. Antonella Carrera</div>
+        <span class="founder-role">Especializada en Derecho Civil y de Familia</span>
+        <p class="founder-desc">Graduada de la Facultad de Derecho de la UBA. Práctica especializada en procesos de familia, sucesiones y derecho civil en general. Su enfoque combina el rigor técnico con un trato empático y cercano, acompañando a sus clientes en momentos que muchas veces son de alta carga emocional. Asesora en divorcios, cuota alimentaria, régimen de comunicación, uniones convivenciales y sucesiones, buscando siempre la solución más eficiente y humana para cada caso.</p>
+      </div>
+    </div>
+    <div class="founder-card">
+      <div class="founder-photo belen"><img src="belen.jpg" alt="Dra. Belén Romero"/></div>
+      <div class="founder-body">
+        <div class="founder-name">Dra. Belén Romero</div>
+        <span class="founder-role">Especializada en Derecho Laboral y Empresarial</span>
+        <p class="founder-desc">Graduada de la Facultad de Derecho de la UBA. Práctica orientada al derecho laboral y empresarial. Asesora por un lado a trabajadores en reclamos por despidos, accidentes, trabajo no registrado, y por el otro a empleadores/empresas en la gestión preventiva de conflictos, contratos, constitución de sociedades y toma de decisiones estratégicas. Su visión combina el conocimiento jurídico con una perspectiva integrada orientada a resultados, teniendo en cuenta los objetivos e interés de cada cliente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="deco-circle" style="width:220px;height:220px;background:rgba(196,168,130,0.07);top:20px;right:-70px;"></div>
+  <span class="section-label">Áreas de práctica</span>
+  <h2 class="section-title" style="margin-top:6px;">En qué podemos ayudarte</h2>
+  <div class="areas-grid">
+    <div class="area-card">
+      <div class="area-photo"><img src="laboral.jpg" alt="Derecho Laboral"/></div>
+      <div class="area-body"><h3>Derecho Laboral</h3>
+        <ul class="area-list"><li>Despidos y liquidaciones</li><li>Accidentes laborales</li><li>Trabajo no registrado</li><li>Reclamos salariales</li><li>Asesoramiento a trabajadores y empleadores</li></ul>
+      </div>
+    </div>
+    <div class="area-card">
+      <div class="area-photo"><img src="empresarial.jpg" alt="Derecho Empresarial"/></div>
+      <div class="area-body"><h3>Derecho Empresarial</h3>
+        <ul class="area-list"><li>Contratos comerciales</li><li>Asesoramiento a empresas y emprendedores</li><li>Constitución de sociedades</li><li>Prevención y resolución de conflictos</li></ul>
+      </div>
+    </div>
+    <div class="area-card">
+      <div class="area-photo familia"><img src="familia.jpg" alt="Derecho de Familia"/></div>
+      <div class="area-body"><h3>Derecho de Familia</h3>
+        <ul class="area-list"><li>Divorcios</li><li>Cuota alimentaria</li><li>Régimen de comunicación</li><li>Uniones convivenciales</li><li>Sucesiones</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="elegirnos">
+  <div class="deco-circle" style="width:200px;height:200px;background:rgba(196,168,130,0.06);bottom:-60px;left:-60px;"></div>
+  <div class="deco-circle" style="width:120px;height:120px;background:rgba(155,122,103,0.05);top:40px;right:80px;"></div>
+  <div class="elegirnos-header">
+    <span class="section-label">Por qué elegirnos</span>
+    <h2 class="section-title" style="text-align:center;margin-top:8px;">Lo que nos diferencia</h2>
+  </div>
+  <div class="elegirnos-grid">
+    <div class="elegirnos-card"><div class="e-photo"><img src="personalizada.jpg" alt="Atención personalizada"/></div><div class="e-body"><span class="e-num">01</span><h4>Atención personalizada</h4><p>Cada caso es único. Estudiamos tu situación en profundidad y diseñamos una estrategia a medida.</p></div></div>
+    <div class="elegirnos-card"><div class="e-photo"><img src="agiles.jpg" alt="Respuestas ágiles"/></div><div class="e-body"><span class="e-num">02</span><h4>Respuestas ágiles</h4><p>Entendemos la urgencia. Respondemos con rapidez y mantenemos a nuestros clientes informados en todo momento.</p></div></div>
+    <div class="elegirnos-card"><div class="e-photo"><img src="preventivo.jpg" alt="Asesoramiento preventivo"/></div><div class="e-body"><span class="e-num">03</span><h4>Asesoramiento preventivo</h4><p>Preferimos anticipar los problemas antes de que ocurran. La prevención es la mejor estrategia legal.</p></div></div>
+    <div class="elegirnos-card"><div class="e-photo"><img src="estrategicas.jpg" alt="Soluciones estratégicas"/></div><div class="e-body"><span class="e-num">04</span><h4>Soluciones estratégicas</h4><p>Pensamos cada caso con visión de largo plazo, buscando la mejor solución para tus intereses.</p></div></div>
+  </div>
+</section>
+
+<div class="slogan">
+  <div class="deco-circle" style="width:320px;height:320px;background:rgba(196,168,130,0.07);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  <span class="slogan-label">Nuestra promesa</span>
+  <div class="slogan-text">Tu preocupación, <span>nuestro compromiso.</span></div>
+  <span class="slogan-sub">— B.A Legales</span>
+</div>
+
+<section class="contacto" id="contacto">
+  <div class="deco-circle" style="width:240px;height:240px;background:rgba(196,168,130,0.06);top:-80px;right:-80px;"></div>
+  <div class="deco-circle" style="width:140px;height:140px;background:rgba(155,122,103,0.05);bottom:60px;left:40px;"></div>
+  <span class="section-label">Contacto</span>
+  <h2 class="section-title" style="margin-top:6px;">Hablemos de tu caso</h2>
+  <div class="contacto-grid">
+    <form class="contacto-form" action="https://formsubmit.co/ba.consultaslegales@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nueva consulta desde BA Legales"/>
+      <input type="hidden" name="_captcha" value="false"/>
+      <input type="hidden" name="_template" value="table"/>
+      <input type="text" name="nombre" placeholder="Nombre completo" required/>
+      <input type="email" name="email" placeholder="Correo electrónico" required/>
+      <select name="area"><option value="">Área de consulta</option><option>Derecho Laboral</option><option>Derecho Empresarial</option><option>Derecho de Familia</option><option>Otra consulta</option></select>
+      <textarea name="mensaje" placeholder="Contanos brevemente tu situación..." required></textarea>
+      <button type="submit" class="btn-send">Enviar consulta <i class="ti ti-arrow-right"></i></button>
+    </form>
+    <div class="contacto-info">
+      <h3>También podés contactarnos por</h3>
+      <div class="contact-item"><i class="ti ti-mail"></i><a href="mailto:ba.consultaslegales@gmail.com" style="color:inherit;text-decoration:none;">ba.consultaslegales@gmail.com</a></div>
+      <div class="contact-item"><i class="ti ti-brand-instagram"></i><a href="https://instagram.com/ba.legales" target="_blank" style="color:inherit;text-decoration:none;">@ba.legales</a></div>
+      <div class="social-row">
+        <a href="mailto:ba.consultaslegales@gmail.com" class="social-btn"><i class="ti ti-mail"></i></a>
+        <a href="https://instagram.com/ba.legales" target="_blank" class="social-btn"><i class="ti ti-brand-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <img class="footer-logo-img" src="logo-nav.png" alt="BA Legales"/>
+    <span class="footer-brand-name">B.A Legales</span>
+    <p>Estudio jurídico boutique en Buenos Aires. Profesionalismo, dedicación y confianza desde el primer contacto.</p>
+  </div>
+  <div class="footer-col"><h5>Áreas de práctica</h5><a href="#areas">Derecho Laboral</a><a href="#areas">Derecho Empresarial</a><a href="#areas">Derecho de Familia</a></div>
+  <div class="footer-col"><h5>Contacto</h5><p>ba.consultaslegales@gmail.com</p><p>@ba.legales</p><p>Buenos Aires, Argentina</p></div>
+</footer>
+<div class="footer-bottom">© 2025 BA Legales · Todos los derechos reservados</div>
+
+</body>
+</html>
